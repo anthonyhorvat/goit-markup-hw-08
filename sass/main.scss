@@ -1,0 +1,21 @@
+@import "./base/resets.scss";
+@import "./base/common";
+@import "./utils/variables.scss";
+@import "./utils/hidden";
+@import "./components/container";
+@import "./components/section";
+@import "./components/soc-icons";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/advantages";
+@import "./layouts/abous-us";
+@import "./layouts/team";
+@import "./layouts/customers";
+
+@import "./layouts/portfolio-filter";
+@import "./layouts/portfolio-projects";
+
+@import "./layouts/footer";
+@import "./layouts/backdrop";
+@import "./layouts/modal";

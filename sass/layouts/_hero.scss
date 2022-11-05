@@ -1,0 +1,81 @@
+.hero {
+  text-align: center;
+  padding: 200px 0;
+  background-color: var(--dark-background-color);
+  background-image: var(--bg-gradient), url(../images/mobile-hero-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: var(--bg-gradient), url(../images/mobile-hero-image2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: var(--bg-gradient), url(../images/tablet-hero-image.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: var(--bg-gradient),
+        url(../images/tablet-hero-image2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: var(--bg-gradient), url(../images/hero-image.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: var(--bg-gradient), url(../images/hero-image2x.jpg);
+    }
+  }
+
+  &__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    max-width: 696px;
+
+    @media screen and (min-width: 1200px) {
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--main-page-color);
+    }
+  }
+
+  &__btn {
+    padding: 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--main-page-color);
+      color: var(--second-page-color);
+    }
+  }
+}
