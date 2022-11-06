@@ -5,17 +5,28 @@
   border-bottom: 1px solid #ececec;
   display: flex;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 10px 15px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 
   &__container {
     align-items: center;
     display: flex;
+    @media screen and (max-width: 767px) {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__logo {
-    margin-right: 93px;
+    margin-right: 88px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
   &__link:hover,
   &__link:focus {
@@ -37,7 +48,7 @@
   letter-spacing: 0.03em;
   color: #000000;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1199px) {
     font-size: 24px;
     line-height: 1.16;
   }
@@ -48,10 +59,11 @@
 }
 
 .menu {
-  // display: flex;
+  display: flex;
   gap: 50px;
-
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   &__link {
     font-weight: 500;
@@ -64,26 +76,48 @@
 }
 
 .connect {
-  //display: flex;
-  margin-left: auto;
-  gap: 50px;
-  align-items: center;
+  margin-left: 96px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    gap: 50px;
+    align-items: center;
+  }
 
-  display: none;
+  .connect__item:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+  }
 
   &__link {
     color: var(--main-text-color);
     font-weight: 500;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
+    &__link:first-child {
+      margin-bottom: 20px;
+    }
   }
 
   &__icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -111,6 +145,9 @@
   border: none;
   display: block;
   padding: 0;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mob-container {
@@ -133,10 +170,13 @@
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mob-menu__list {
-  margin-bottom: 50px;
 }
 
 .mob-menu__item:not(:last-child) {
@@ -193,6 +233,7 @@
 
 .mob-soc {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .mob-soc__link {
