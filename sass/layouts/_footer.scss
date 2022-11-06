@@ -35,6 +35,10 @@
   }
 }
 
+.btn__text {
+  margin-right: 10px;
+}
+
 .address {
   @media screen and (max-width: 1199px) {
     text-align: center;
@@ -175,10 +179,6 @@
   @media screen and (min-width: 1200px) {
     display: flex;
   }
-}
-
-.btn__text {
-  margin-right: 10px;
 }
 
 .tab-footer__container {
