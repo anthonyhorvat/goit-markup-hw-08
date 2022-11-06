@@ -358,6 +358,10 @@ img {
   color: #212121;
 }
 
+.mob-current {
+  color: #2196f3;
+}
+
 .menu-close-btn {
   padding: 0;
   margin-left: auto;
@@ -715,9 +719,18 @@ img {
 
 .filter__list {
   display: flex;
-  justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .filter__list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter__list {
+    justify-content: center;
+  }
 }
 
 .projects__list {

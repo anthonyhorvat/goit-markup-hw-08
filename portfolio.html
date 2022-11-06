@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width,
+    initial-scale=1.0 />
 
     <title>Document</title>
 
@@ -21,13 +22,14 @@
   <body>
     <header class="header">
       <div class="container header__container">
+        <a href="./index.html" class="logo header__logo link">
+          <span class="logo__text">Web</span>Studio</a
+        >
+
         <nav class="navigation">
-          <a href="./index.html" class="logo header__logo link">
-            <span class="logo__text">Web</span>Studio</a
-          >
           <ul class="menu list">
             <li class="menu__item">
-              <a href="./index.html" class="menu__link header__link link">
+              <a href="./index.html" class="menu__link link header__link">
                 Студія</a
               >
             </li>
@@ -66,8 +68,82 @@
           </li>
         </ul>
       </div>
-    </header>
 
+      <button type="button" class="menu-open-btn" data-menu-open>
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-menu_burger"></use>
+        </svg>
+      </button>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
+          <div class="mob-menu__top">
+            <button class="menu-close-btn" data-menu-close>
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close_burger"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link link"> Студія</a>
+              </li>
+              <li class="mob-menu__item">
+                <a
+                  href="./portfolio.html"
+                  class="mob-menu__link link mob-current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mob-menu__bottom">
+            <div class="mob-connect">
+              <ul class="mob-connect__list list">
+                <li class="mob-connect__item">
+                  <a
+                    href="tel:0961111111"
+                    class="mob-connect__link mob-connect__number link"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+
+                <li class="mob-connect__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mob-connect__link mob-connect__mail link"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="mob-soc list">
+                <li class="mob-soc__item">
+                  <a href="" class="link mob-soc__link">Instagram</a>
+                  <span class="mob-soc__line"></span>
+                </li>
+                <li class="mob-soc__item">
+                  <a href="" class="link mob-soc__link">Twitter</a>
+                  <span class="mob-soc__line"></span>
+                </li>
+                <li class="mob-soc__item">
+                  <a href="" class="link mob-soc__link">Facebook</a>
+                  <span class="mob-soc__line"></span>
+                </li>
+                <li class="mob-soc__item">
+                  <a href="" class="link mob-soc__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="projects section">
         <div class="container">
@@ -96,11 +172,36 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img
-                    src="./images/img8.jpg"
-                    width="370"
-                    alt="website-picture"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img8-mob.jpeg    1x,
+                        ./images/img8-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img8.jpeg    1x,
+                        ./images/tab-img8-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desk-img8.jpeg    1x,
+                        ./images/desk-img8-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/img8.jpg"
+                      alt="website-picture"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -116,11 +217,35 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img
-                    src="./images/img9.jpg"
-                    width="370"
-                    alt="basketball-poster"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img9-mob.jpeg    1x,
+                        ./images/img9-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img9.jpeg    1x,
+                        ./images/tab-img9-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img9.jpeg    1x,
+                        ./images/desk-img9-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/img9.jpg"
+                      width="370"
+                      alt="basketball-poster"
+                    />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -138,11 +263,35 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img
-                    src="./images/img10.jpg"
-                    width="370"
-                    alt="restaurant-application"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img10-mob.jpeg    1x,
+                        ./images/img10-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img10.jpeg    1x,
+                        ./images/tab-img10-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img10.jpeg    1x,
+                        ./images/desk-img10-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/img10.jpg"
+                      width="370"
+                      alt="restaurant-application"
+                    />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -158,7 +307,35 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img src="./images/img11.jpg" width="370" alt="headphones" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img11-mob.jpeg    1x,
+                        ./images/img11-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img11.jpeg    1x,
+                        ./images/tab-img11-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img11.jpeg    1x,
+                        ./images/desk-img11-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/img11.jpg"
+                      width="370"
+                      alt="headphones"
+                    />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -174,7 +351,31 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img src="./images/img12.jpg" width="370" alt="boxes" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img12-mob.jpeg    1x,
+                        ./images/img12-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img12.jpeg    1x,
+                        ./images/tab-img12-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img12.jpeg    1x,
+                        ./images/desk-img12-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/img12.jpg" width="370" alt="boxes" />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -190,11 +391,35 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img
-                    src="./images/img13.jpg"
-                    width="370"
-                    alt="website-picture"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img13-mob.jpeg    1x,
+                        ./images/img13-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img13.jpeg    1x,
+                        ./images/tab-img13-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img13.jpeg    1x,
+                        ./images/desk-img13-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/img13.jpg"
+                      width="370"
+                      alt="website-picture"
+                    />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -210,7 +435,31 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img src="./images/img14.jpg" width="370" alt="book" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img14-mob.jpeg    1x,
+                        ./images/img14-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img14.jpeg    1x,
+                        ./images/tab-img14-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img14.jpeg    1x,
+                        ./images/desk-img14-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/img14.jpg" width="370" alt="book" />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -226,7 +475,31 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img src="./images/img15.jpg" width="370" alt="label" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img15-mob.jpeg    1x,
+                        ./images/img15-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img15.jpeg    1x,
+                        ./images/tab-img15-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img15.jpeg    1x,
+                        ./images/desk-img15-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img src="./images/img15.jpg" width="370" alt="label" />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -242,11 +515,35 @@
             <li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="overlay">
-                  <img
-                    src="./images/img16.jpg"
-                    width="370"
-                    alt="laptop-picture"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img16-mob.jpeg    1x,
+                        ./images/img16-mob-2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img16.jpeg    1x,
+                        ./images/tab-img16-2x.jpeg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desk-img16.jpeg    1x,
+                        ./images/desk-img16-2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/img16.jpg"
+                      width="370"
+                      alt="laptop-picture"
+                    />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -266,75 +563,77 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div class="address-box">
-          <a href="./index.html" class="link logo footer__logo">
-            <span class="logo__text">Web</span>Studio</a
-          >
+        <div class="tab-footer__container">
+          <div class="address-box">
+            <a href="./index.html" class="link logo footer__logo">
+              <span class="logo__text">Web</span>Studio</a
+            >
 
-          <address class="address">
-            <ul class="address__list list">
-              <li class="address__item">
-                <a
-                  href="https://goo.gl/maps/uwqA6wS43bjGLCaNA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="address__link link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+            <address class="address">
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a
+                    href="https://goo.gl/maps/uwqA6wS43bjGLCaNA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="address__link link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+
+                <li class="address__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="address__link address__link--mail link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+
+                <li class="address__item">
+                  <a
+                    href="tel:0961111111"
+                    class="address__link address__link--tel link"
+                  >
+                    096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join">
+            <p class="join__text">Приєднуйтесь</p>
+
+            <ul class="soc-icons list">
+              <li class="soc-icons__item footer-icons__item">
+                <a href="" class="link soc-icons__link footer-icons__link">
+                  <svg width="20" height="20" class="soc-icons__logo">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-
-              <li class="address__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="address__link address__link--mail link"
-                  >info@devstudio.com</a
-                >
+              <li class="soc-icons__item footer-icons__item">
+                <a href="" class="link soc-icons__link footer-icons__link">
+                  <svg width="20" height="20" class="soc-icons__logo">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-
-              <li class="address__item">
-                <a
-                  href="tel:0961111111"
-                  class="address__link address__link--tel link"
-                >
-                  096 111 11 11</a
-                >
+              <li class="soc-icons__item footer-icons__item">
+                <a href="" class="link soc-icons__link footer-icons__link">
+                  <svg width="20" height="20" class="soc-icons__logo">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-icons__item footer-icons__item">
+                <a href="" class="link soc-icons__link footer-icons__link">
+                  <svg width="20" height="20" class="soc-icons__logo">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="join">
-          <p class="join__text">Приєднуйтесь</p>
-
-          <ul class="soc-icons list">
-            <li class="soc-icons__item footer-icons__item">
-              <a href="" class="link soc-icons__link footer-icons__link">
-                <svg width="20" height="20" class="soc-icons__logo">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="soc-icons__item footer-icons__item">
-              <a href="" class="link soc-icons__link footer-icons__link">
-                <svg width="20" height="20" class="soc-icons__logo">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="soc-icons__item footer-icons__item">
-              <a href="" class="link soc-icons__link footer-icons__link">
-                <svg width="20" height="20" class="soc-icons__logo">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="soc-icons__item footer-icons__item">
-              <a href="" class="link soc-icons__link footer-icons__link">
-                <svg width="20" height="20" class="soc-icons__logo">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="mailing">
@@ -363,5 +662,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
