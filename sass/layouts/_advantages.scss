@@ -4,8 +4,19 @@
   gap: 30px;
 }
 
+.advantages__item {
+  width: 100%;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
 .advantages__box {
-  // width: 270px;
   height: 120px;
   max-width: 100%;
 
@@ -29,19 +40,8 @@
     text-align: center;
   }
 }
+
 .advantages__text {
   line-height: 1.71;
   color: var(--main-text-color);
-}
-
-.advantages__item {
-  width: 100%;
-
-  @media screen and (min-width: 768px) {
-    width: calc((100% - 30px) / 2);
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: calc((100% - 90px) / 4);
-  }
 }

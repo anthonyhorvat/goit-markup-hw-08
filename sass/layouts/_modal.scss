@@ -22,12 +22,12 @@
     width: auto;
   }
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
     width: 450px;
     height: 609px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 528px;
     height: 581px;
   }
@@ -44,7 +44,7 @@
 
     margin-bottom: 12px;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       line-height: 1.15;
     }
   }
@@ -184,7 +184,7 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       line-height: 1.71;
       font-size: 14px;
     }
@@ -198,7 +198,7 @@
 
     color: var(--second-page-color);
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       line-height: 1.71;
       font-size: 14px;
     }

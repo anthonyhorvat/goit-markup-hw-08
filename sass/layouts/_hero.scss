@@ -28,7 +28,7 @@
     background-image: var(--bg-gradient), url(../images/mobile-hero-image2x.jpg);
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     background-image: var(--bg-gradient), url(../images/tablet-hero-image.jpg);
 
     @media (min-device-pixel-ratio: 2),
@@ -39,7 +39,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     background-image: var(--bg-gradient), url(../images/hero-image.jpg);
 
     @media (min-device-pixel-ratio: 2),
@@ -70,7 +70,7 @@
       max-width: 360px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-weight: 900;
       font-size: 44px;
       line-height: 1.36;

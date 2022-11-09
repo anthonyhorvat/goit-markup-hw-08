@@ -20,19 +20,17 @@
 }
 
 .customers__item {
-  // width: 170px;
   height: 92px;
-
   width: calc((100% - 30px) / 2);
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 60px) / 3);
   }
-
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: calc((100% - 150px) / 6);
   }
 }
+
 .customers__link {
   border: 1px solid #afb1b8;
   border-radius: 4px;
