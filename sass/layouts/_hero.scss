@@ -21,11 +21,13 @@
     max-width: 768px;
     height: 400px;
   }
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: var(--bg-gradient), url(../images/mobile-hero-image2x.jpg);
+  @media screen and (max-width: 767px) {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: var(--bg-gradient),
+        url(../images/mobile-hero-image2x.jpg);
+    }
   }
 
   @include tablet {
